@@ -8,11 +8,14 @@ import { Provider } from 'react-redux';
 import App from '~/app/App.tsx';
 import { store } from '~/store/configure-store.ts';
 
+import { Header } from './components/header/header';
+import { Nav } from './components/nav/nav';
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
             <ChakraProvider>
-                <App />
+                <App /> <Header /> <Nav />
             </ChakraProvider>
         </Provider>
     </StrictMode>,
