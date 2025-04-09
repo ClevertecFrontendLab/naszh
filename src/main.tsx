@@ -10,11 +10,12 @@ import { store } from '~/store/configure-store.ts';
 
 import { Header } from './components/header/header';
 import { Nav } from './components/nav/nav';
+import { theme } from './styles/theme';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
-            <ChakraProvider>
+            <ChakraProvider theme={theme}>
                 <App /> <Header /> <Nav />
             </ChakraProvider>
         </Provider>
