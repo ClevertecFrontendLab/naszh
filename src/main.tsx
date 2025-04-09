@@ -9,7 +9,7 @@ import App from '~/app/App.tsx';
 import { store } from '~/store/configure-store.ts';
 
 import { Header } from './components/header/header';
-import { Nav } from './components/nav/nav';
+import { Nav } from './components/nav';
 import { theme } from './styles/theme';
 
 createRoot(document.getElementById('root')!).render(

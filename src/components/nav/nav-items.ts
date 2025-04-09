@@ -1,7 +1,31 @@
-export const navItems = [
+import { ComponentWithAs, IconProps } from '@chakra-ui/icons';
+
+import { ChildrensIcon } from '../nav-icons/childrens-icon';
+import { DessertsIcon } from '../nav-icons/desserts-icon';
+import { DrinksIcon } from '../nav-icons/drinks-icon';
+import { FirstDishesIcon } from '../nav-icons/first-dishes-icon';
+import { GrillIcon } from '../nav-icons/grill-icon';
+import { HealthyFoodIcon } from '../nav-icons/healthy-food-icon';
+import { HomemadeIcon } from '../nav-icons/homemade-icon';
+import { NationalIcon } from '../nav-icons/national-icon';
+import { SaladsIcon } from '../nav-icons/salads-icon';
+import { SaucesIcon } from '../nav-icons/sauces-icon';
+import { SecDishesIcon } from '../nav-icons/sec-dishes-icon';
+import { SnacksIcon } from '../nav-icons/snacks-icon';
+import { VeganIcon } from '../nav-icons/vegan-icon';
+
+export type navItemsType = {
+    category: string;
+    path: string;
+    icon: ComponentWithAs<'svg', IconProps>;
+    subItems: { name: string; path: string }[];
+};
+
+export const navItems: navItemsType[] = [
     {
         category: 'Салаты',
         path: '/salads',
+        icon: SaladsIcon,
         subItems: [
             { name: 'Мясные салаты', path: 'meat-salads' },
             { name: 'Рыбные салаты', path: 'fish-salads' },
@@ -12,6 +36,7 @@ export const navItems = [
     {
         category: 'Закуски',
         path: '/snacks',
+        icon: SnacksIcon,
         subItems: [
             { name: 'Мясные закуски', path: 'meat-snacks' },
             { name: 'Рыбные закуски', path: 'fish-snacks' },
@@ -24,6 +49,7 @@ export const navItems = [
     {
         category: 'Первые блюда',
         path: '/first-dishes',
+        icon: FirstDishesIcon,
         subItems: [
             { name: 'Мясные супы', path: 'meat-soups' },
             { name: 'Овощные супы', path: 'vegetable-soups' },
@@ -35,6 +61,7 @@ export const navItems = [
     {
         category: 'Вторые блюда',
         path: '/second-dishes',
+        icon: SecDishesIcon,
         subItems: [
             { name: 'Мясные', path: 'meat' },
             { name: 'Рыбные', path: 'fish' },
@@ -51,8 +78,9 @@ export const navItems = [
         ],
     },
     {
-        category: 'Десерты и выпечка',
+        category: 'Десерты, выпечка',
         path: '/desserts-pastries',
+        icon: DessertsIcon,
         subItems: [
             { name: 'Блины и оладьи', path: 'pancakes' },
             { name: 'Пироги и пончики', path: 'pies' },
@@ -72,6 +100,7 @@ export const navItems = [
     {
         category: 'Блюда на гриле',
         path: '/grill',
+        icon: GrillIcon,
         subItems: [
             { name: 'Говядина', path: 'grilled-beef' },
             { name: 'Свинина', path: 'grilled-pork' },
@@ -84,6 +113,7 @@ export const navItems = [
     {
         category: 'Веганская кухня',
         path: '/vegan',
+        icon: VeganIcon,
         subItems: [
             { name: 'Закуски', path: 'snacks' },
             { name: 'Первые блюда', path: 'first-dishes' },
@@ -98,6 +128,7 @@ export const navItems = [
     {
         category: 'Детские блюда',
         path: '/childrens',
+        icon: ChildrensIcon,
         subItems: [
             { name: 'Первые блюда', path: 'first-dishes' },
             { name: 'Вторые блюда', path: 'second-dishes' },
@@ -112,6 +143,7 @@ export const navItems = [
     {
         category: 'Лечебное питание',
         path: '/healthy-food',
+        icon: HealthyFoodIcon,
         subItems: [
             { name: 'Детская диета', path: 'childrens-diet' },
             { name: 'Диета №1', path: 'diet-1' },
@@ -132,8 +164,9 @@ export const navItems = [
         ],
     },
     {
-        category: 'Национальные блюда',
+        category: 'Национальные',
         path: '/national',
+        icon: NationalIcon,
         subItems: [
             { name: 'Американская кухня', path: 'american' },
             { name: 'Армянская кухня', path: 'armenian' },
@@ -155,6 +188,7 @@ export const navItems = [
     {
         category: 'Соусы',
         path: '/sauces',
+        icon: SaucesIcon,
         subItems: [
             { name: 'Соусы мясные', path: 'meat-sauces' },
             { name: 'Соусы сырные', path: 'cheese-sauces' },
@@ -162,22 +196,9 @@ export const navItems = [
         ],
     },
     {
-        category: 'Домашние заготовки',
-        path: '/homemade',
-        subItems: [
-            { name: 'Мясные заготовки', path: 'meat-homemade' },
-            { name: 'Рыбные заготовки', path: 'fish-homemade' },
-            { name: 'Из огурцов', path: 'cucumbers-homemade' },
-            { name: 'Из томатов', path: 'tomatoes-homemade' },
-            { name: 'Из грибов', path: 'mushrooms-homemade' },
-            { name: 'Овощные заготовки', path: 'vegetables-homemade' },
-            { name: 'Салаты, икра', path: 'salads-homemade' },
-            { name: 'Из фруктов и ягод', path: 'fruits-homemade' },
-        ],
-    },
-    {
         category: 'Напитки',
         path: '/drinks',
+        icon: DrinksIcon,
         subItems: [
             { name: 'Соки и фреши', path: 'juices' },
             { name: 'Смузи', path: 'smoothie' },
@@ -188,6 +209,21 @@ export const navItems = [
             { name: 'Квас', path: 'kvass' },
             { name: 'Коктейли', path: 'cocktails' },
             { name: 'Алкогольные', path: 'alcohol' },
+        ],
+    },
+    {
+        category: 'Заготовки',
+        path: '/homemade',
+        icon: HomemadeIcon,
+        subItems: [
+            { name: 'Мясные заготовки', path: 'meat-homemade' },
+            { name: 'Рыбные заготовки', path: 'fish-homemade' },
+            { name: 'Из огурцов', path: 'cucumbers-homemade' },
+            { name: 'Из томатов', path: 'tomatoes-homemade' },
+            { name: 'Из грибов', path: 'mushrooms-homemade' },
+            { name: 'Овощные заготовки', path: 'vegetables-homemade' },
+            { name: 'Салаты, икра', path: 'salads-homemade' },
+            { name: 'Из фруктов и ягод', path: 'fruits-homemade' },
         ],
     },
 ];
