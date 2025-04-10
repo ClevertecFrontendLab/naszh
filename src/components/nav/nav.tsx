@@ -2,7 +2,7 @@ import '../../styles/custom-scroll.css';
 
 import { Accordion, Box, Button, Flex, Stack, Text } from '@chakra-ui/react';
 
-import { ExitIcon } from '../nav-icons/exit';
+import { ExitIcon } from '../icons/exit';
 import { NavItem } from './nav-item';
 import { navItems } from './nav-items';
 

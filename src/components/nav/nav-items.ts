@@ -1,18 +1,18 @@
 import { ComponentWithAs, IconProps } from '@chakra-ui/icons';
 
-import { ChildrensIcon } from '../nav-icons/childrens-icon';
-import { DessertsIcon } from '../nav-icons/desserts-icon';
-import { DrinksIcon } from '../nav-icons/drinks-icon';
-import { FirstDishesIcon } from '../nav-icons/first-dishes-icon';
-import { GrillIcon } from '../nav-icons/grill-icon';
-import { HealthyFoodIcon } from '../nav-icons/healthy-food-icon';
-import { HomemadeIcon } from '../nav-icons/homemade-icon';
-import { NationalIcon } from '../nav-icons/national-icon';
-import { SaladsIcon } from '../nav-icons/salads-icon';
-import { SaucesIcon } from '../nav-icons/sauces-icon';
-import { SecDishesIcon } from '../nav-icons/sec-dishes-icon';
-import { SnacksIcon } from '../nav-icons/snacks-icon';
-import { VeganIcon } from '../nav-icons/vegan-icon';
+import { ChildrensIcon } from '../icons/childrens-icon';
+import { DessertsIcon } from '../icons/desserts-icon';
+import { DrinksIcon } from '../icons/drinks-icon';
+import { FirstDishesIcon } from '../icons/first-dishes-icon';
+import { GrillIcon } from '../icons/grill-icon';
+import { HealthyFoodIcon } from '../icons/healthy-food-icon';
+import { HomemadeIcon } from '../icons/homemade-icon';
+import { NationalIcon } from '../icons/national-icon';
+import { SaladsIcon } from '../icons/salads-icon';
+import { SaucesIcon } from '../icons/sauces-icon';
+import { SecDishesIcon } from '../icons/sec-dishes-icon';
+import { SnacksIcon } from '../icons/snacks-icon';
+import { VeganIcon } from '../icons/vegan-icon';
 
 export type navItemsType = {
     category: string;

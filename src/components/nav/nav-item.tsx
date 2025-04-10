@@ -1,7 +1,7 @@
 import { AccordionButton, AccordionItem, AccordionPanel, Box, Icon, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 
-import { ArrowClose } from '../nav-icons/arrow-close';
+import { ArrowClose } from '../icons/arrow-close';
 import { navItemsType } from './nav-items';
 // import { Link } from 'react-router';
 
