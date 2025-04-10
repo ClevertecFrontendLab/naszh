@@ -1,0 +1,19 @@
+.custom-scroll {
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: thin;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-image: url('data:image/svg+xml;utf8,<svg width="8" height="854" viewBox="0 0 8 854" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="8" height="854" rx="4" fill="black" fill-opacity="0.04"/><rect width="8" height="362.505" rx="4" fill="black" fill-opacity="0.16"/></svg>');
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
