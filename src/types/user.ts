@@ -3,4 +3,5 @@ export type UserProps = {
     lastName: string;
     login?: string;
     img?: string;
+    blog?: string;
 };

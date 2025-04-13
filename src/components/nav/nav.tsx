@@ -7,7 +7,17 @@ import { NavItem } from './nav-item';
 import { navItems } from './nav-items';
 
 export const Nav = () => (
-    <Flex direction='column' justifyContent='space-between' h='calc(100vh - 80px)' w='256px'>
+    <Flex
+        direction='column'
+        justifyContent='space-between'
+        h='calc(100vh - 80px)'
+        w='256px'
+        borderRight='1px solid'
+        borderColor='blackAlpha.200'
+        pos='fixed'
+        left={0}
+        top='80px'
+    >
         <Box className='custom-scroll'>
             <Accordion allowToggle pt={2.5} pl={2.5} pr={4} mt={6}>
                 {navItems.map((item, i) => (

@@ -6,7 +6,19 @@ import { Logo } from '../logo';
 import { UserInfo } from '../user-info';
 
 export const Header = () => (
-    <Flex py={6} pl={4} pr={20} h='80px' alignItems='center' bg='#ffffd3'>
+    <Flex
+        py={6}
+        pl={4}
+        pr={20}
+        h='80px'
+        alignItems='center'
+        bg='#ffffd3'
+        pos='fixed'
+        top={0}
+        left={0}
+        right={0}
+        zIndex={1}
+    >
         <Logo />
         <Breadcrumbs />
         <Spacer />

@@ -1,15 +1,15 @@
 import { Box, Button, Flex, Heading, SimpleGrid } from '@chakra-ui/react';
 
-import { cardsjuiciest } from '~/mocks/cards';
+import { users } from '~/mocks/users';
 
-import { CardJuiciest } from '../card-juiciest';
+import { CardBlog } from '../card-blog';
 import { ArrowRight } from '../icons/arrow-right';
 
-export const TheJuiciest = () => (
-    <Flex flexDirection='column' gap={6} w='100%'>
+export const Blogs = () => (
+    <Flex flexDirection='column' gap={6} w='100%' p={6} background='#c4ff61' borderRadius='16px'>
         <Flex justifyContent='space-between'>
-            <Heading size='2xl' fontWeight={500}>
-                Самое сочное
+            <Heading size='xl' fontWeight={400}>
+                Кулинарные блоги
             </Heading>
             <Button
                 rightIcon={
@@ -17,20 +17,19 @@ export const TheJuiciest = () => (
                         <ArrowRight boxSize={4} />
                     </Box>
                 }
-                variant='solid'
+                variant='link'
                 fontWeight={600}
                 fontSize='18px'
                 color='#000'
                 h='100%'
                 px={6}
                 py={2.5}
-                background='#b1ff2e'
             >
-                Вся подборка
+                Все авторы
             </Button>
         </Flex>
-        <SimpleGrid columns={2} spacing={6}>
-            <CardJuiciest cards={cardsjuiciest} />
+        <SimpleGrid columns={3} spacing={4}>
+            <CardBlog users={users} />
         </SimpleGrid>
     </Flex>
 );
