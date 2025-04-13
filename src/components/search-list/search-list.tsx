@@ -15,10 +15,15 @@ import { FilterBtn } from '../icons/filter-btn';
 import { SearchIcon } from '../icons/search-icon';
 import { SwitchIcon } from '../icons/switch-icon';
 
-export const SearchList = () => (
-    <Flex m='32px 0 16px' gap='16px' flexDirection='column'>
-        <Heading fontSize='48px' mb={4}>
-            Приятного аппетита!
+export const SearchList = ({ heading, descr }: { heading: string; descr?: string }) => (
+    <Flex m='32px 0 16px' gap='16px' flexDirection='column' alignItems='center'>
+        <Heading fontSize='48px' mb={4} textAlign='center'>
+            {heading}
+            {descr && (
+                <Text fontWeight={500} fontSize='16px' color='blackAlpha.600' w='696px' mt='12px'>
+                    {descr}
+                </Text>
+            )}
         </Heading>
         <Flex w='518px' gap='12px'>
             <Button
