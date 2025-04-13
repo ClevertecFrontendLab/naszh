@@ -10,6 +10,7 @@ import { store } from '~/store/configure-store.ts';
 
 import { Header } from './components/header/header';
 import { Nav } from './components/nav';
+import { NewRecipes } from './components/new-recipes/new-recipes';
 import { SearchList } from './components/search-list/search-list';
 import { theme } from './styles/theme';
 
@@ -19,7 +20,18 @@ createRoot(document.getElementById('root')!).render(
             <ChakraProvider theme={theme}>
                 <App /> <Header />
                 <Flex>
-                    <Nav /> <SearchList />
+                    <Nav />
+                    <Flex
+                        width='1360px'
+                        flexDirection='column'
+                        alignItems='center'
+                        gap={6}
+                        h='fit-content'
+                        ml={6}
+                    >
+                        <SearchList />
+                        <NewRecipes />
+                    </Flex>
                 </Flex>
             </ChakraProvider>
         </Provider>

@@ -16,14 +16,7 @@ import { SearchIcon } from '../icons/search-icon';
 import { SwitchIcon } from '../icons/switch-icon';
 
 export const SearchList = () => (
-    <Flex
-        width='1360px'
-        flexDirection='column'
-        alignItems='center'
-        gap='16px'
-        m='32px 0'
-        h='fit-content'
-    >
+    <Flex m='32px 0' gap='16px' flexDirection='column'>
         <Heading fontSize='48px' mb={4}>
             Приятного аппетита!
         </Heading>
