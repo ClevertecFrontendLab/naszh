@@ -1,5 +1,7 @@
 import { ComponentWithAs, IconProps } from '@chakra-ui/react';
 
+import { UserProps } from './user';
+
 export type CardProps = {
     image: string;
     alt: string;
@@ -8,4 +10,5 @@ export type CardProps = {
     icon: ComponentWithAs<'svg', IconProps>;
     tag: string;
     bookmarks?: { type: ComponentWithAs<'svg', IconProps>; count: number }[];
+    user?: UserProps;
 };

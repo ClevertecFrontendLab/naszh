@@ -1,8 +1,8 @@
-import { Flex, Heading, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton } from '@chakra-ui/react';
 
-import { cards } from '~/mocks/cards';
+import { cardsrecipe } from '~/mocks/cards';
 
-import { CardRecipe } from '../card-recipe/card-recipe';
+import { CardRecipe } from '../card-recipe';
 import { ArrowLeft } from '../icons/arrow-left';
 import { ArrowRight } from '../icons/arrow-right';
 
@@ -14,7 +14,7 @@ export const NewRecipes = () => (
             </Heading>
         </Flex>
         <Flex gap={6} pos='relative'>
-            <CardRecipe cards={cards} />
+            <CardRecipe cards={cardsrecipe} />
             <IconButton
                 icon={<ArrowLeft />}
                 // onClick={prevSlide}
@@ -26,7 +26,11 @@ export const NewRecipes = () => (
                 bg='black'
             />
             <IconButton
-                icon={<ArrowRight />}
+                icon={
+                    <Box color='#ffffd3'>
+                        <ArrowRight />
+                    </Box>
+                }
                 // onClick={nextSlide}
                 position='absolute'
                 top='42%'

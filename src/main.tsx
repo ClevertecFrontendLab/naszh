@@ -8,10 +8,11 @@ import { Provider } from 'react-redux';
 import App from '~/app/App.tsx';
 import { store } from '~/store/configure-store.ts';
 
-import { Header } from './components/header/header';
+import { Header } from './components/header';
 import { Nav } from './components/nav';
-import { NewRecipes } from './components/new-recipes/new-recipes';
-import { SearchList } from './components/search-list/search-list';
+import { NewRecipes } from './components/new-recipes';
+import { SearchList } from './components/search-list';
+import { TheJuiciest } from './components/the-juiciest';
 import { theme } from './styles/theme';
 
 createRoot(document.getElementById('root')!).render(
@@ -31,6 +32,7 @@ createRoot(document.getElementById('root')!).render(
                     >
                         <SearchList />
                         <NewRecipes />
+                        <TheJuiciest />
                     </Flex>
                 </Flex>
             </ChakraProvider>

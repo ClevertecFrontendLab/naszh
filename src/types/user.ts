@@ -1,6 +1,6 @@
 export type UserProps = {
     firstName: string;
     lastName: string;
-    login: string;
+    login?: string;
     img?: string;
 };
