@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 
-import { cardsjuiciest } from '~/mocks/cards';
+import { cardsjuiciest, cardsrecipe } from '~/mocks/cards';
 
 import { Blogs } from '../blogs';
 import { NewRecipes } from '../new-recipes';
@@ -22,6 +22,11 @@ export const PageMain = () => (
         <NewRecipes />
         <TheJuiciest title='Самое сочное' cards={cardsjuiciest} />
         <Blogs />
-        <RelevantKitchen />
+        <RelevantKitchen
+            title='Веганская кухня'
+            desc='Интересны не только убеждённым вегетарианцам, но и тем, кто хочет попробовать
+                вегетарианскую диету и готовить вкусные вегетарианские блюда.'
+            cards={cardsrecipe}
+        />
     </Flex>
 );

@@ -1,5 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 
+import { cardssweet } from '~/mocks/cards';
+
 import { RelevantKitchen } from '../relevant-kitchen';
 import { SearchList } from '../search-list';
 import { TabsRow } from '../tabs-row';
@@ -9,7 +11,6 @@ export const PageVegan = () => (
         width='1360px'
         flexDirection='column'
         alignItems='center'
-        // gap={10}
         h='fit-content'
         ml={6}
         mt='80px'
@@ -20,6 +21,10 @@ export const PageVegan = () => (
         />
         <TabsRow />
         <Box h={10} />
-        <RelevantKitchen />
+        <RelevantKitchen
+            title='Десерты, выпечка'
+            desc='Без них невозможно представить себе ни современную, ни традиционную  кулинарию. Пироги и печенья, блины, пончики, вареники и, конечно, хлеб - рецепты изделий из теста многообразны и невероятно популярны.'
+            cards={cardssweet}
+        />
     </Flex>
 );

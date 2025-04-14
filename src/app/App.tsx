@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router';
 
 import { Header } from '~/components/header';
 import { Nav } from '~/components/nav';
+import { PageJuiciest } from '~/components/page-juiciest';
 import { PageMain } from '~/components/page-main';
 import { PageVegan } from '~/components/page-vegan';
 import { Sidebar } from '~/components/sidebar';
@@ -25,7 +26,7 @@ function App() {
                     <Route path='/' element={<PageMain />} />
                     <Route path='/vegan/*' element={<PageVegan />} />
                     <Route path='/vegan' element={<PageVegan />} />
-                    {/* <Route path='/Juiciest' element={<JuiciestPage />} /> */}
+                    <Route path='/juiciest' element={<PageJuiciest />} />
                 </Routes>
                 <Sidebar />
             </Flex>

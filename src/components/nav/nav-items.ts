@@ -24,6 +24,8 @@ export type navItemsType = {
     path: string;
     icon: ComponentWithAs<'svg', IconProps>;
     subItems: SubItemType[];
+    isOpen?: boolean;
+    onToggle?: () => void;
 };
 
 export const navItems: navItemsType[] = [

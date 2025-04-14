@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, SimpleGrid } from '@chakra-ui/react';
 import { FC } from 'react';
+import { Link } from 'react-router';
 
 import { CardProps } from '~/types/card';
 
@@ -13,23 +14,25 @@ export const TheJuiciest: FC<{ title: string; cards: CardProps[] }> = ({ title, 
                 <Heading size='2xl' fontWeight={500}>
                     {title}
                 </Heading>
-                <Button
-                    rightIcon={
-                        <Box color='#000'>
-                            <ArrowRight boxSize={4} />
-                        </Box>
-                    }
-                    variant='solid'
-                    fontWeight={600}
-                    fontSize='18px'
-                    color='#000'
-                    h='100%'
-                    px={6}
-                    py={2.5}
-                    background='lime.400'
-                >
-                    Вся подборка
-                </Button>
+                <Link to='/juiciest'>
+                    <Button
+                        rightIcon={
+                            <Box color='#000'>
+                                <ArrowRight boxSize={4} />
+                            </Box>
+                        }
+                        variant='solid'
+                        fontWeight={600}
+                        fontSize='18px'
+                        color='#000'
+                        h='100%'
+                        px={6}
+                        py={2.5}
+                        background='lime.400'
+                    >
+                        Вся подборка
+                    </Button>
+                </Link>
             </Flex>
         )}
 

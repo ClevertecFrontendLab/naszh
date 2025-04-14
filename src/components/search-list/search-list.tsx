@@ -47,6 +47,7 @@ export const SearchList = ({ heading, descr }: { heading: string; descr?: string
                     placeholder='Название или ингредиент...'
                     h='48px'
                     borderColor='blackAlpha.600'
+                    _placeholder={{ color: 'lime.800' }}
                 />
             </InputGroup>
         </Flex>

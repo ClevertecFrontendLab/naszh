@@ -22,7 +22,7 @@ export const CardKitchenL: FC<{ cards: CardProps[] }> = ({ cards }) =>
                         <Badge
                             display='flex'
                             gap={2}
-                            colorScheme='green'
+                            bgColor='lime.50'
                             py='2px'
                             px='8px'
                             borderRadius='4px'

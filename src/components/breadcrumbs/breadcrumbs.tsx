@@ -15,7 +15,7 @@ export const Breadcrumbs = () => {
             }
             for (const subItem of item.subItems) {
                 if (`${item.path}/${subItem.path}` === path) {
-                    return `${subItem.name}`;
+                    return subItem.name;
                 }
             }
         }
@@ -26,8 +26,12 @@ export const Breadcrumbs = () => {
         <>
             <Box flex='0 0 8rem' />
             <Breadcrumb spacing='6px' separator={<ChevronRightIcon color='gray.800' />}>
-                <BreadcrumbItem isCurrentPage={pathParts.length === 0}>
-                    <BreadcrumbLink as={Link} to='/'>
+                <BreadcrumbItem isCurrentPage={location.pathname === '/'}>
+                    <BreadcrumbLink
+                        as={Link}
+                        to='/'
+                        color={location.pathname === '/' ? '#000' : 'blackAlpha.700'}
+                    >
                         Главная
                     </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -35,9 +39,23 @@ export const Breadcrumbs = () => {
                 {pathParts.map((part, index) => {
                     const path = `/${pathParts.slice(0, index + 1).join('/')}`;
                     const name = getBreadcrumbName(path);
+                    const isLast = index === pathParts.length - 1;
+
+                    if (location.pathname === '/juiciest' && isLast) {
+                        return (
+                            <BreadcrumbItem key={path} isCurrentPage={isLast}>
+                                <BreadcrumbLink color='#000'>Самое сочное</BreadcrumbLink>
+                            </BreadcrumbItem>
+                        );
+                    }
+
                     return (
-                        <BreadcrumbItem key={path}>
-                            <BreadcrumbLink as={Link} to={path}>
+                        <BreadcrumbItem key={path} isCurrentPage={isLast}>
+                            <BreadcrumbLink
+                                as={Link}
+                                to={path}
+                                color={isLast ? '#000' : 'blackAlpha.700'}
+                            >
                                 {name || part.charAt(0).toUpperCase() + part.slice(1)}
                             </BreadcrumbLink>
                         </BreadcrumbItem>

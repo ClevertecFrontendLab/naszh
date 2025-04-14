@@ -1,12 +1,12 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import { Box, Button, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 
-import { cardsveg } from '~/mocks/cards-veg';
+import { cardsveg } from '~/mocks/cards';
 import { tabs } from '~/mocks/tabs';
 
 import { TheJuiciest } from '../the-juiciest';
 
 export const TabsRow = () => (
-    <Tabs mb={6}>
+    <Tabs>
         <TabList justifyContent='center' w='fit-content' m='0 auto 24px'>
             {tabs.map((tab) => (
                 <Tab
@@ -42,5 +42,20 @@ export const TabsRow = () => (
                 <TheJuiciest title='' cards={cardsveg} />
             </TabPanel>
         </TabPanels>
+        <Box display='flex' justifyContent='center' mt='16px'>
+            <Button
+                variant='solid'
+                fontWeight={600}
+                fontSize='16px'
+                lineHeight='150%'
+                color='#000'
+                h='100%'
+                px={4}
+                py={2}
+                background='lime.400'
+            >
+                Загрузить еще
+            </Button>
+        </Box>
     </Tabs>
 );
