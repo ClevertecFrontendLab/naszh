@@ -26,7 +26,8 @@ export const CardJuiciest: FC<{ cards: CardProps[] }> = ({ cards }) =>
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
                 variant='outline'
-                width='668px'
+                // width='668px'
+                width='100%'
                 borderRadius='8px'
                 maxH='244px'
             >

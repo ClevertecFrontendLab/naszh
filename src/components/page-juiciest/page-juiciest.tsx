@@ -8,7 +8,7 @@ import { TheJuiciest } from '../the-juiciest';
 
 export const PageJuiciest = () => (
     <Flex
-        width='1360px'
+        width={{ lg: '880px', xl: '1360px' }}
         flexDirection='column'
         alignItems='center'
         h='fit-content'

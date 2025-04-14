@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton, SimpleGrid } from '@chakra-ui/react';
 
 import { cardsrecipe } from '~/mocks/cards';
 
@@ -9,12 +9,16 @@ import { ArrowRight } from '../icons/arrow-right';
 export const NewRecipes = () => (
     <Flex flexDirection='column' gap={6} w='100%'>
         <Flex justifyContent='flex-start'>
-            <Heading size='2xl' fontWeight={500}>
+            <Heading size='2xl' fontWeight={500} fontSize={{ lg: '36px', xl: '48px' }}>
                 Новые рецепты
             </Heading>
         </Flex>
         <Flex gap={6} pos='relative'>
-            <CardRecipe cards={cardsrecipe} />
+            <SimpleGrid columns={{ lg: 3, xl: 4 }} spacing={{ lg: 3, xl: 6 }} width='100%'>
+                {cardsrecipe.map((card) => (
+                    <CardRecipe card={card} />
+                ))}
+            </SimpleGrid>
             <IconButton
                 icon={<ArrowLeft />}
                 // onClick={prevSlide}

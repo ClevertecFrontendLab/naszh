@@ -8,7 +8,7 @@ import { TabsRow } from '../tabs-row';
 
 export const PageVegan = () => (
     <Flex
-        width='1360px'
+        width={{ lg: '880px', xl: '1360px' }}
         flexDirection='column'
         alignItems='center'
         h='fit-content'

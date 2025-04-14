@@ -10,7 +10,7 @@ import { TheJuiciest } from '../the-juiciest';
 
 export const PageMain = () => (
     <Flex
-        width='1360px'
+        width={{ lg: '880px', xl: '1360px' }}
         flexDirection='column'
         alignItems='center'
         gap={10}
