@@ -5,7 +5,7 @@ export const SwitchIcon = createIcon({
     viewBox: '0 0 34 20',
     path: (
         <>
-            <rect width='34' height='20' rx='10' fill='black' fill-opacity='0.16' />
+            <rect width='34' height='20' rx='10' fill='black' fillOpacity='0.16' />
             <circle cx='10' cy='10' r='8' fill='white' />
         </>
     ),
