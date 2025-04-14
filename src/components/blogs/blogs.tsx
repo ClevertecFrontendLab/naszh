@@ -6,7 +6,7 @@ import { CardBlog } from '../card-blog';
 import { ArrowRight } from '../icons/arrow-right';
 
 export const Blogs = () => (
-    <Flex flexDirection='column' gap={6} w='100%' p={6} background='#c4ff61' borderRadius='16px'>
+    <Flex flexDirection='column' gap={6} w='100%' p={6} background='lime.300' borderRadius='16px'>
         <Flex justifyContent='space-between'>
             <Heading size='xl' fontWeight={400}>
                 Кулинарные блоги

@@ -1,5 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 
+import { cardsjuiciest } from '~/mocks/cards';
+
 import { Blogs } from '../blogs';
 import { NewRecipes } from '../new-recipes';
 import { RelevantKitchen } from '../relevant-kitchen';
@@ -18,7 +20,7 @@ export const PageMain = () => (
     >
         <SearchList heading='Приятного аппетита!' />
         <NewRecipes />
-        <TheJuiciest />
+        <TheJuiciest title='Самое сочное' cards={cardsjuiciest} />
         <Blogs />
         <RelevantKitchen />
     </Flex>

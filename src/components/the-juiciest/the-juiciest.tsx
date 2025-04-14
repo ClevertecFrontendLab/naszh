@@ -1,36 +1,40 @@
 import { Box, Button, Flex, Heading, SimpleGrid } from '@chakra-ui/react';
+import { FC } from 'react';
 
-import { cardsjuiciest } from '~/mocks/cards';
+import { CardProps } from '~/types/card';
 
 import { CardJuiciest } from '../card-juiciest';
 import { ArrowRight } from '../icons/arrow-right';
 
-export const TheJuiciest = () => (
+export const TheJuiciest: FC<{ title: string; cards: CardProps[] }> = ({ title, cards }) => (
     <Flex flexDirection='column' gap={6} w='100%'>
-        <Flex justifyContent='space-between'>
-            <Heading size='2xl' fontWeight={500}>
-                Самое сочное
-            </Heading>
-            <Button
-                rightIcon={
-                    <Box color='#000'>
-                        <ArrowRight boxSize={4} />
-                    </Box>
-                }
-                variant='solid'
-                fontWeight={600}
-                fontSize='18px'
-                color='#000'
-                h='100%'
-                px={6}
-                py={2.5}
-                background='#b1ff2e'
-            >
-                Вся подборка
-            </Button>
-        </Flex>
+        {title != '' && (
+            <Flex justifyContent='space-between'>
+                <Heading size='2xl' fontWeight={500}>
+                    {title}
+                </Heading>
+                <Button
+                    rightIcon={
+                        <Box color='#000'>
+                            <ArrowRight boxSize={4} />
+                        </Box>
+                    }
+                    variant='solid'
+                    fontWeight={600}
+                    fontSize='18px'
+                    color='#000'
+                    h='100%'
+                    px={6}
+                    py={2.5}
+                    background='lime.400'
+                >
+                    Вся подборка
+                </Button>
+            </Flex>
+        )}
+
         <SimpleGrid columns={2} spacing={6}>
-            <CardJuiciest cards={cardsjuiciest} />
+            <CardJuiciest cards={cards} />
         </SimpleGrid>
     </Flex>
 );

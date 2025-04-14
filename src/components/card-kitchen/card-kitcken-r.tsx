@@ -23,8 +23,8 @@ export const CardKitchenR: FC<{ cards: CardProps[] }> = ({ cards }) =>
                     </Heading>
                     <Button
                         variant='outline'
-                        borderColor='#2db100'
-                        color='#2db100'
+                        borderColor='lime.600'
+                        color='lime.600'
                         p='0 12px'
                         fontSize='14px'
                         height='32px'

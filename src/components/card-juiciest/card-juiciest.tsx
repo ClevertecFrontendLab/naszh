@@ -28,14 +28,22 @@ export const CardJuiciest: FC<{ cards: CardProps[] }> = ({ cards }) =>
                 variant='outline'
                 width='668px'
                 borderRadius='8px'
+                maxH='244px'
             >
-                <Image src={card.image} alt={card.alt} borderRadius='8px 0 0 8px' pos='relative' />
+                <Image
+                    src={card.image}
+                    alt={card.alt}
+                    borderRadius='8px 0 0 8px'
+                    pos='relative'
+                    boxSize='100%'
+                    objectFit='cover'
+                />
                 {card.user && (
                     <Flex
                         alignItems='center'
                         borderRadius='4px'
                         p='4px 8px'
-                        bg='#d7ff94'
+                        bg='lime.150'
                         pos='absolute'
                         bottom='7px'
                         left='24px'
@@ -50,7 +58,7 @@ export const CardJuiciest: FC<{ cards: CardProps[] }> = ({ cards }) =>
                         </Box>
                     </Flex>
                 )}
-                <Stack py={5} px={6} spacing='6' w='322px'>
+                <Stack py={5} px={6} spacing='6' w='full'>
                     <Flex justifyContent='space-between'>
                         <Badge
                             display='flex'
@@ -81,12 +89,16 @@ export const CardJuiciest: FC<{ cards: CardProps[] }> = ({ cards }) =>
                             ))}
                         </Flex>
                     </Flex>
-                    <Heading className='truncate-heading' size='md' fontWeight={500}>
-                        {card.title}
-                    </Heading>
-                    <Text className='truncate-text' fontSize='14px' lineHeight='143%'>
-                        {card.desciption}
-                    </Text>
+                    <Box maxW='274px'>
+                        <Heading className='truncate-heading' size='md' fontWeight={500}>
+                            {card.title}
+                        </Heading>
+                    </Box>
+                    <Box maxW='274px'>
+                        <Text className='truncate-text' fontSize='14px' lineHeight='143%'>
+                            {card.desciption}
+                        </Text>
+                    </Box>
                     <Stack direction='row' spacing={2} justifyContent='right'>
                         <Button
                             leftIcon={<BookmarkHeart />}

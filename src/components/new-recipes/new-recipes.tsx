@@ -27,7 +27,7 @@ export const NewRecipes = () => (
             />
             <IconButton
                 icon={
-                    <Box color='#ffffd3'>
+                    <Box color='lime.50'>
                         <ArrowRight />
                     </Box>
                 }

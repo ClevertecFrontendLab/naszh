@@ -18,7 +18,7 @@ export const Sidebar = () => (
             <Stack
                 p='8px 16px'
                 fontWeight={800}
-                color='#2db100'
+                color='lime.600'
                 spacing='8px'
                 flexDirection='row'
                 alignItems='center'
@@ -29,7 +29,7 @@ export const Sidebar = () => (
             <Stack
                 p='8px 16px'
                 fontWeight={800}
-                color='#2db100'
+                color='lime.600'
                 spacing='8px'
                 flexDirection='row'
                 alignItems='center'
@@ -40,7 +40,7 @@ export const Sidebar = () => (
             <Stack
                 p='8px 16px'
                 fontWeight={800}
-                color='#2db100'
+                color='lime.600'
                 spacing='8px'
                 flexDirection='row'
                 alignItems='center'

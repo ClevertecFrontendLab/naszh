@@ -1,6 +1,4 @@
-import '../../styles/custom-scroll.css';
-
-import { Accordion, Box, Button, Flex, Stack, Text } from '@chakra-ui/react';
+import { Accordion, Button, Flex, Stack, Text } from '@chakra-ui/react';
 
 import { ExitIcon } from '../icons/exit-icon';
 import { NavItem } from './nav-item';
@@ -18,13 +16,31 @@ export const Nav = () => (
         left={0}
         top='80px'
     >
-        <Box className='custom-scroll'>
-            <Accordion allowToggle pt={2.5} pl={2.5} pr={4} mt={6}>
-                {navItems.map((item, i) => (
-                    <NavItem {...item} key={i} />
-                ))}
-            </Accordion>
-        </Box>
+        <Accordion
+            allowToggle
+            pt={2.5}
+            pl={2.5}
+            mt={6}
+            overflowY='auto'
+            css={{
+                '&::-webkit-scrollbar': {
+                    width: '8px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                    background: 'rgba(0, 0, 0, 0.16)',
+                    borderRadius: '8px',
+                    maxHeight: '30%',
+                },
+                '&::-webkit-scrollbar-track': {
+                    background: 'rgba(0, 0, 0, 0.04)',
+                    borderRadius: '8px',
+                },
+            }}
+        >
+            {navItems.map((item, i) => (
+                <NavItem {...item} key={i} />
+            ))}
+        </Accordion>
         <Stack p={6} gap={4}>
             <Text color='blackAlpha.400' fontSize='xs' lineHeight={4} fontWeight={500}>
                 Версия программы 03.25

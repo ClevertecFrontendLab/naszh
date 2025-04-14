@@ -14,11 +14,16 @@ import { SecDishesIcon } from '../icons/sec-dishes-icon';
 import { SnacksIcon } from '../icons/snacks-icon';
 import { VeganIcon } from '../icons/vegan-icon';
 
+export type SubItemType = {
+    name: string;
+    path: string;
+};
+
 export type navItemsType = {
     category: string;
     path: string;
     icon: ComponentWithAs<'svg', IconProps>;
-    subItems: { name: string; path: string }[];
+    subItems: SubItemType[];
 };
 
 export const navItems: navItemsType[] = [

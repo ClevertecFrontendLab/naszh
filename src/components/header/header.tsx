@@ -12,7 +12,7 @@ export const Header = () => (
         pr={20}
         h='80px'
         alignItems='center'
-        bg='#ffffd3'
+        bg='lime.50'
         pos='fixed'
         top={0}
         left={0}
